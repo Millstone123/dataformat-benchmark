@@ -25,3 +25,14 @@ dataformat-benchmark
 - `dataformat_benchmark/runner.py` — benchmark driver
 - `fixtures/records.json` — sample rows
 - `tests/` — unit tests
+
+## Bundled sample
+
+`dataformat_benchmark.pickle_sample.load_sample_rows()` deserializes the
+bundled sample rows (a serialized copy of `fixtures/records.json`'s first two
+entries) so the pickle probe can be demonstrated offline:
+
+```python
+from dataformat_benchmark.pickle_sample import load_sample_rows
+print(load_sample_rows())
+```
